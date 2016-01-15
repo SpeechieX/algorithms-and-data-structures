@@ -13,18 +13,28 @@ PriorityQueue.prototype.enqueue = function(value, priority) {
   } else {
     this.items.push({value: value, priority: priority});
   }
-  this.SortQueue();
+  this.sortQueue();
 };
 
 PriorityQueue.prototype.dequeue = function() {
-  return this.items.shift().value;
+  return this.items.shift();
 };
 
-PriorityQueue.prototype.SortQueue = function() {
+PriorityQueue.prototype.sortQueue = function() {
   this.items.sort(function(a,b) {
     return a.priority - b.priority;
   });
 };
+
+PriorityQueue.prototype.updatePriority = function(value, newPriority) {
+  var index;
+  for (index=0; index<this.items.length; index++) {
+    if (this.items[index].value === value) {
+      this.items[index].priority = newPriority;
+    }
+  }
+  this.sortQueue();
+}
 
 PriorityQueue.prototype.isEmpty = function() {
   return this.items.length === 0;
