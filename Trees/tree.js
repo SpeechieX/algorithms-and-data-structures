@@ -32,3 +32,5 @@ child3.addChild(child4);
 child1.addChild(child2);
 
 console.log(root);
+
+module.exports = Tree;

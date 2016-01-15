@@ -1,4 +1,4 @@
-var DWGraph = require('./directed_weighted_graph');
+var DWGraph = require('./directed-weighted-graph');
 var PriorityQueue = require('../Queue/priority_queue.js');
 
 // This algorithm takes in a two node names (as strings)
@@ -6,7 +6,7 @@ var PriorityQueue = require('../Queue/priority_queue.js');
 // you must traverse in order to get from the source to the target
 // node in the shortest path regime
 
-// This is a method on a directed_weighted_graph
+// This is a method on a directed-weighted-graph
 
 DWGraph.prototype.init = function(source) {
   var node, PQ = new PriorityQueue(), INFINITY=1/0, distances = {};
