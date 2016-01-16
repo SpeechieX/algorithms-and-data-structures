@@ -1,0 +1,25 @@
+{
+  "name": "algos-ds",
+  "version": "1.0.0",
+  "description": "A repository filled with algorithms and data structures.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtamsut/Algorithms-and-Data-Structures.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data",
+    "structures",
+    "javascript"
+  ],
+  "author": "Jonathan H. Tamsut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtamsut/Algorithms-and-Data-Structures/issues"
+  },
+  "homepage": "https://github.com/jtamsut/Algorithms-and-Data-Structures#readme"
+}
