@@ -34,23 +34,26 @@ DWGraph.prototype.djikstra = function(source) {
 return distances;
 };
 
-var dwg = new DWGraph();
+dwg = new DWGraph();
 
 dwg.addNode('A');
 dwg.addNode('B');
 dwg.addNode('C');
 dwg.addNode('D');
 dwg.addNode('E');
+dwg.addNode('F');
 
-dwg.addEdge('A','C', 2);
-dwg.addEdge('A','B', 4);
-dwg.addEdge('B','C', 3);
-dwg.addEdge('C','B', 1);
-dwg.addEdge('C','D', 4);
-dwg.addEdge('C','E', 5);
-dwg.addEdge('E','D', 1);
-dwg.addEdge('B','D', 2);
-dwg.addEdge('B','E', 3);
+dwg.addEdge('A','B',2);
+dwg.addEdge('A','D',4);
+dwg.addEdge('B','E',9);
+dwg.addEdge('E','F',7);
+dwg.addEdge('F','D',9);
+dwg.addEdge('D','C',2);
+dwg.addEdge('C','A',6);
+dwg.addEdge('C','B',1);
+dwg.addEdge('C','E',2);
+dwg.addEdge('C','F',1);
 
-//console.log(dwg.nodes['B']);
-console.log(dwg.djikstra('A'));
+console.log(dwg.djikstra('C'));
+
+module.exports = DWGraph;
