@@ -54,8 +54,23 @@ describe('Djikstras tests', function() {
     expect(JSON.stringify(dwg.djikstra('B'))).toBe(JSON.stringify(bResult));
   })
 
-  it('should update values when shorter path is found', function() {
-    var cResult = { C: 0, B: 1, F: 1, A: 6, E: 2, D: 10 };
+  it('should return the correct paths when starting at node D', function () {
+    var dResult = { D: 0, C: 2, B: 3, F: 3, E: 4, A: 8 };
+    expect(JSON.stringify(dwg.djikstra('D'))).toBe(JSON.stringify(dResult));
+  })
+
+  it('should return the correct paths when starting at node E', function () {
+    var eResult = { E: 0, F: 7, D: 16, C: 18, B: 19, A: 24 };
+    expect(JSON.stringify(dwg.djikstra('E'))).toBe(JSON.stringify(eResult));
+  })
+
+  it('should return the correct paths when starting at node F', function () {
+    var fResult = { F: 0, D: 9, C: 11, B: 12, E: 13, A: 17 };
+    expect(JSON.stringify(dwg.djikstra('F'))).toBe(JSON.stringify(fResult));
+  })
+
+  it('should not update values when a longer path is found', function() {
+    var cResult = { C: 0, B: 1, F: 1, E: 2, A: 6, D: 10 };
     expect(JSON.stringify(dwg.djikstra('C'))).toBe(JSON.stringify(cResult));
   })
 

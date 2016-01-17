@@ -29,7 +29,7 @@ PriorityQueue.prototype.sortQueue = function() {
 PriorityQueue.prototype.updatePriority = function(value, newPriority) {
   var index;
   for (index=0; index<this.items.length; index++) {
-    if (this.items[index].value === value) {
+    if (this.items[index].value === value && this.items[index].priority > newPriority) {
       this.items[index].priority = newPriority;
     }
   }

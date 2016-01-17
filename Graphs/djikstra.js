@@ -54,6 +54,9 @@ dwg.addEdge('C','B',1);
 dwg.addEdge('C','E',2);
 dwg.addEdge('C','F',1);
 
-console.log(dwg.djikstra('C'));
+console.log('D:',dwg.djikstra('D'));
+console.log('E:',dwg.djikstra('E'));
+console.log('F:',dwg.djikstra('F'));
+
 
 module.exports = DWGraph;
