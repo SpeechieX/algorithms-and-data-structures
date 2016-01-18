@@ -8,9 +8,9 @@ Graph.prototype.addNode = function(value) {
   this.nodes[value] = [];
 };
 
-Graph.prototype.addEdge = function(fromNode, toNode, weight) {
-  this.nodes[fromNode].push([toNode, weight]);
-  this.nodes[toNode].push([fromNode, weight]);
+Graph.prototype.addEdge = function(fromNode, toNode) {
+  this.nodes[fromNode].push([toNode]);
+  this.nodes[toNode].push([fromNode]);
 };
 
 module.exports = Graph;
