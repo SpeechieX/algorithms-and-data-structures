@@ -1,17 +1,12 @@
 # Algorithms and Data Structure In JavaScript
 
-This repository contains implementations of various data structures and their
-associated algorithms. The purpose of this repository is to learn more about data
-structures and gain an expertise in general algorithmic paradigms such as:
+This repository has implementations of various data structures
+and their associated algorithms, as well as algorithms not associated with data structures.
+I plan to focus on implementing these algorithms using the main algorithm design paradigms:
+divide-and-conqueur, greedy algorithm design and dynamic programming.
 
-1. Recursion
-2. Greedy Algorithms
-3. Dynamic Programming
-4. Memoization
-5. Amortized Analysis
-
-At some point I would like to be an npm module that JavaScript developers could
-use to build software with. I would also like to write some of these algorithms in
-ES6.
+This README.md discusses time complexity and overviews general algorithmic ideas such as
+the aforementioned algorithmic design paradigms, determining the asymptotic complexity of an
+algorithm, amortized analysis and useful mathematics for algorithm design and analysis.
 
 ## Determining the Time and Space Complexity of An Algorithm
