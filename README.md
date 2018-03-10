@@ -1,7 +1,10 @@
 # Algorithms and Data Structure In JavaScript
 
-This repository has implementations of various data structures
-and their associated algorithms, as well as algorithms not associated with data structures.
+This repository contains implementations of various data structures
+and algorithms. 
+
+
+
 I plan to focus on implementing these algorithms using the main algorithm design paradigms:
 divide-and-conqueur, greedy algorithm design and dynamic programming.
 
