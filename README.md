@@ -1,4 +1,4 @@
-# Algorithms and Data Structure In JavaScript
+# Algorithms and Data Structures
 
 This repository contains implementations of various data structures
 and algorithms. 
