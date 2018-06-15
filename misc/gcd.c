@@ -14,5 +14,5 @@ int gcd(int a, int b) {
 }
 
 void main(int argc, char *argv[]) {
-    printf("gcd(3918848, 1653264) == %d\n", gcd(3918848, 1653264));
+    printf("gcd(357, 234) == %d\n", gcd(357, 234));
 }
