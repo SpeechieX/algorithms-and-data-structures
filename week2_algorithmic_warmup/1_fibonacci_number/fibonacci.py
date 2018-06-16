@@ -1,9 +1,19 @@
 # Uses python3
+
 def calc_fib(n):
-    if (n <= 1):
+    f0 = 0
+    f1 = 1
+    i = 2
+    if n < 2:
         return n
+    while i < n+1:
+        tmp = f0
+        f0 = f1
+        f1 = f0 + tmp
+        i+=1
+    
+    return f1
 
-    return calc_fib(n - 1) + calc_fib(n - 2)
-
-n = int(input())
-print(calc_fib(n))
+if __name__ == '__main__':
+    n = int(input())
+    print(calc_fib(n))

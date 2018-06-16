@@ -1,15 +1,19 @@
 # Algorithms and Data Structures
 
-This repository contains implementations of various data structures
-and algorithms. 
+This repository contains implementations of various data structures and algorithms. My goal here is to focus on algorithmic paradigms and data structures.
 
+## Greedy Algorithms
 
+A **greedy algorithm** makes a locally optimal choice in hope that, that choice will lead to a globally optimal solution.
 
-I plan to focus on implementing these algorithms using the main algorithm design paradigms:
-divide-and-conqueur, greedy algorithm design and dynamic programming.
+## Dynamic Programming
 
-This README.md discusses time complexity and overviews general algorithmic ideas such as
-the aforementioned algorithmic design paradigms, determining the asymptotic complexity of an
-algorithm, amortized analysis and useful mathematics for algorithm design and analysis.
+## Divide-and-Conquer
 
-## Determining the Time and Space Complexity of An Algorithm
+The general idea behind a divide-and-conquer approach is: 
+
+1. Break a problem into non-overlapping subproblems of the same type 
+2. Solve the subproblems 
+3. Combine the results
+
+A **recurrence relation** is an equation recursively defining as sequence of values.

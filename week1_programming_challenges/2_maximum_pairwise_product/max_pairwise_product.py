@@ -1,3 +1,5 @@
+#python3
+
 def max_pairwise_product(numbers):
     largest_idx = 0 if numbers[0] == max(numbers[0], numbers[1]) else 1
     sec_largest_idx = 1 if numbers[1] == min(numbers[0], numbers[1]) else 0   
