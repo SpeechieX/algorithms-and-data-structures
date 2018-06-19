@@ -11,7 +11,7 @@ def gcd(a, b):
 
 def lcm(a, b):
     c = a * b
-    return int(c/gcd(a,b))
+    return c/gcd(a,b)
 
 if __name__ == '__main__':
     a, b = map(int, input().split())
