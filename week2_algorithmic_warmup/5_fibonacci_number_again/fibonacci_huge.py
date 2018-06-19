@@ -29,10 +29,9 @@ def calc_fib(n):
     return f1
 
 def fibonacci_huge(n, m):
-    print(get_pisano_period(m))
-    pisano_period = n % get_pisano_period(m)
-    return calc_fib(pisano_period)
-   
+    pisano_period = get_pisano_period(m)
+    new_n = n % pisano_period
+    return calc_fib(new_n) % m
 
 
 if __name__ == '__main__':

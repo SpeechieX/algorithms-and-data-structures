@@ -15,7 +15,10 @@ def fibonacci_sum_naive(n):
 
     return sum % 10
 
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    n = int(input)
-    print(fibonacci_sum_naive(n))
+# if __name__ == '__main__':
+#     input = sys.stdin.read()
+#     n = int(input)
+#     print(fibonacci_sum_naive(n))
+
+for i in range(0, 100): 
+    print("n: ", i, "sum: ", fibonacci_sum_naive(i))
