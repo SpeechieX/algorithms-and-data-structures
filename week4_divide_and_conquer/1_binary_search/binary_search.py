@@ -2,8 +2,17 @@
 import sys
 
 def binary_search(a, x):
-    left, right = 0, len(a)
-    # write your code here
+    # TODO: FINISH IMPLEMENTATION
+    # left, right = 0, len(a)
+    # midpoint = len(a)//2
+    # if (a[midpoint] == x): 
+    #     return midpoint
+    # elif (a[midpoint] > x): 
+    #     return binary_search(a[midpoint+1: len], x)
+    # else:
+    #     return binary_search(a[0: midpoint], x) 
+
+
 
 def linear_search(a, x):
     for i in range(len(a)):
