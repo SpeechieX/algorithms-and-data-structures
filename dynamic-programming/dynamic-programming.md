@@ -12,3 +12,7 @@ How would we go about coming up with an algorithm to compute such a thing?
 
 In the *longest increasing subsequence* problem, the input is a sequence of numbers a<sub>1</sub>, ..., a<sub>n</sub>.
 
+## List of Problems
+
+1. Rod cutting 
+2. 

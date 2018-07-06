@@ -1,10 +1,24 @@
 # Uses python3
 import sys
+import math 
+INFINITY = math.inf
 
 def get_change(m):
-    #write your code here
-    return m // 4
+    denoms = [1,3,4]
+    # Initialize table to all INFINITY
+    table = [ INFINITY for i in range(0,m+1)]
+    table[0] = 0
+    
+    # Table generation
+    for denom in denoms:
+        for idx in range(denom, len(table)):
+            item = table[idx]
+            if (idx >= denom):
+                table[idx] = min(item, (table[idx-denom] + 1))
+    
+    # Return last element
+    return table[m-1]
 
 if __name__ == '__main__':
-    m = int(sys.stdin.read())
+    m = int(input())
     print(get_change(m))
