@@ -17,7 +17,7 @@ def get_change(m):
                 table[idx] = min(item, (table[idx-denom] + 1))
     
     # Return last element
-    return table[m-1]
+    return table[m]
 
 if __name__ == '__main__':
     m = int(input())
