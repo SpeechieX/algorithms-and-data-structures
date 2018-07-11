@@ -16,8 +16,24 @@ class Bracket:
             return True
         return False
 
+class Stack: 
+    def __init__(self): 
+        self.stack = []
+    
+    def push(self, item): 
+        self.stack.append(item)
+
+    def pop(self): 
+        return self.stack.pop()
+    
+    def empty(self): 
+        if len(self.stack): 
+            return True 
+        return False
+
+
 if __name__ == "__main__":
-    text = sys.stdin.read()
+    text = input()
 
     opening_brackets_stack = []
     for i, next in enumerate(text):
