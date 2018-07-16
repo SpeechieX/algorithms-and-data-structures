@@ -1,19 +1,3 @@
-# Uses python3
-import sys
-
-def get_majority_element(a, left, right):
-
-    if left == right:
-        return -1
-    if left + 1 == right:
-        return a[left]
-    
-    # Mid-point of list 
-    middle = (right-left)//2 + left
-    
-    return majority(a[left:middle], a[middle:right])
-
-# Created majority utility function
 def majority(arr1, arr2):
     
     maj1, maj2 = None, None
@@ -40,12 +24,3 @@ def majority(arr1, arr2):
         return maj2
 
     return -1
-
-if __name__ == '__main__':
-    input = input()
-    print(input)
-    n, *a = list(map(int, input.split()))
-    if get_majority_element(a, 0, n) != -1:
-        print(1)
-    else:
-        print(0)
