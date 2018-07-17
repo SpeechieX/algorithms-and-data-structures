@@ -11,39 +11,28 @@ def get_majority_element(a, left, right):
     # Mid-point of list 
     middle = (right-left)//2 + left
     
-    return majority(a[left:middle], a[middle:right])
+    left_maj = majority(get_majority_element(a, left, middle), a, left, middle) 
+    right_maj = majority(get_majority_element(a, middle, right), a, middle, right)
+    
+    if (left_maj == -1 and left_maj == right_maj):
+        return -1
+    
+    if (left_maj == right_maj): 
+        return left_maj 
+
+    if (left_maj != right_maj): 
+        return max( majority(left_maj, a, left, right), majority(right_maj, a, left, right))
 
 # Created majority utility function
-def majority(arr1, arr2):
-    
-    maj1, maj2 = None, None
-    mergedList = arr1 + arr2
+def majority(elem, a, left, right):
 
-    # Add any majority in half of array to maj1
-    for elem1 in arr1: 
-        if (arr1.count(elem1) > len(arr1)//2):
-            maj1 = elem1
-            break 
-
-    for elem2 in arr2: 
-        if (arr2.count(elem2) > len(arr2)//2):
-            maj2 = elem2 
-            break
-
-    if ( maj1 == None and maj1 == maj2 ):
-        return -1
-
-    if (maj1 != None and mergedList.count(maj1) > len(mergedList)//2):
-        return maj1
-    
-    if (maj2 != None and mergedList.count(maj2) > len(mergedList)//2):
-        return maj2
+    if (a[left:right].count(elem) > (right-left)//2): 
+        return elem
 
     return -1
 
 if __name__ == '__main__':
-    input = input()
-    print(input)
+    input = sys.stdin.read()
     n, *a = list(map(int, input.split()))
     if get_majority_element(a, 0, n) != -1:
         print(1)
