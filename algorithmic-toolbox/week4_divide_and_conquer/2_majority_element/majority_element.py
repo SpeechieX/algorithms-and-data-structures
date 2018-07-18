@@ -13,7 +13,7 @@ def get_majority_element(a, left, right):
     
     left_maj = majority(get_majority_element(a, left, middle), a, left, middle) 
     right_maj = majority(get_majority_element(a, middle, right), a, middle, right)
-    
+
     if (left_maj == -1 and left_maj == right_maj):
         return -1
     
