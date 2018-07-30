@@ -1,18 +1,43 @@
 # Uses python3
 import sys
 
-def get_number_of_inversions(a, b, left, right):
-    number_of_inversions = 0
-    if right - left <= 1:
-        return number_of_inversions
-    ave = (left + right) // 2
-    number_of_inversions += get_number_of_inversions(a, b, left, ave)
-    number_of_inversions += get_number_of_inversions(a, b, ave, right)
-    #write your code here
-    return number_of_inversions
+def merge(arr, left, midpoint, right):
+    inversions = 0 
+    i, j = left, midpoint
+    sorted = []
+    
+    while i < midpoint and j < right: 
+        
+        if arr[i] <= arr[j]: 
+            sorted.append(arr[i])
+            i+=1
+        else:
+            sorted.append(arr[j])
+            inversions += (midpoint - i)
+            j+=1            
+
+    if j == right: 
+        sorted.extend(arr[i:midpoint])
+
+    arr[left:left+len(sorted)] = sorted
+
+    return inversions
+
+
+def get_number_of_inversions(arr, left, right):
+
+    if right < left + 2:
+        return 0
+   
+    midpoint = (right-left)//2 + left
+    
+    inversion_count = get_number_of_inversions(arr, left, midpoint)
+    inversion_count += get_number_of_inversions(arr, midpoint, right)
+    inversion_count += merge(arr, left, midpoint, right)
+    
+    return inversion_count
 
 if __name__ == '__main__':
     input = sys.stdin.read()
     n, *a = list(map(int, input.split()))
-    b = n * [0]
-    print(get_number_of_inversions(a, b, 0, len(a)))
+    print(get_number_of_inversions(a, 0, len(a)))
